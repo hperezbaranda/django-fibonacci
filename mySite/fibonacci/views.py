@@ -1,11 +1,13 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from .models import Fibonacci
 
 def calculate(request,number):
-    return HttpResponse({fibonacci(number)})
+    
+    fibonacci = Fibonacci()
+    fibonacci.number = number
+    result = fibonacci.fibonacci(number)
+    fibonacci.result = result
+    fibonacci.save()
 
-def fibonacci(number):
-    if(number == 0 or number == 1):
-        return 1
-    else:
-        return fibonacci(number-1)+fibonacci(number-2)
+    return HttpResponse(result)
