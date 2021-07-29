@@ -2,7 +2,7 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 
 def calculate(request,number):
-    return HttpResponse(fibonacci(number))
+    return HttpResponse({fibonacci(number)})
 
 def fibonacci(number):
     if(number == 0 or number == 1):
