@@ -1,3 +1,5 @@
 from django.test import TestCase
 
-# Create your tests here.
+class TestFibonacci():
+    def calculatFibo5(self, number):
+        assert(number, 8)

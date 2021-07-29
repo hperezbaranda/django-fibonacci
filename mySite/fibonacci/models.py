@@ -12,4 +12,4 @@ class Fibonacci(models.Model):
             return self.fibonacci(number-1)+self.fibonacci(number-2)
 
     def __str__(self) -> str:
-        return (self.number,self.result)
+        return self.number
