@@ -6,8 +6,6 @@ def calculate(request,number):
     
     fibonacci = Fibonacci()
     fibonacci.number = number
-    result = fibonacci.fibonacci(number)
-    fibonacci.result = result
-    fibonacci.save()
+    fibonacci.fibonacci(number)
 
-    return HttpResponse(result)
+    return HttpResponse("O fibonacci do numero %s es: %s" % (number,fibonacci.result))
