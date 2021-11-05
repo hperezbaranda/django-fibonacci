@@ -15,4 +15,4 @@ class Fibonacci(models.Model):
         return self.result
 
     def __str__(self) -> str:
-        return "(%s, %s)" % (self.number,self.result)
+        return f'The fibonacci of {self.number} is {self.result}'
