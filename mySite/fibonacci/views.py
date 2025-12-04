@@ -8,4 +8,4 @@ def calculate(request,number):
     fibonacci.number = number
     fibonacci.fibonacci(number)
 
-    return HttpResponse("O fibonacci do numero %s es: %s" % (number,fibonacci.result))
+    return HttpResponse("The fibonacci of number %s is: %s" % (number,fibonacci.result))
